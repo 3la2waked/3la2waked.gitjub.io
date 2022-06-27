@@ -1,0 +1,48 @@
+body {
+    background: lightgray;
+    font-family: Tahoma;
+}
+
+h1, h2 {
+    color: cadetblue;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+a{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+p:first-letter {
+    font-size: 1.5rem;
+}
+
+.inline-list li {
+    display: inline;
+}
+
+.inline-list li:not(:last-child):after{
+    content: ','
+}
+.child-list {
+    font-size: .9rem;
+}
+
+ol.reversed {
+    list-style-type: none;
+    counter-reset: a 4;
+}
+
+ol.reversed > li::before {
+    content: counter(a)'.';
+    counter-increment: a -1;
+
+}
