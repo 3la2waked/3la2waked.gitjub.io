@@ -1,0 +1,123 @@
+body {
+    font-family: Arial;
+}
+
+header {
+    background: lightblue;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background: darkcyan;
+}
+
+.list {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    border-right: 1px solid black;
+}
+
+.list-float li {
+    float: left;
+}
+
+.row-float {
+    clear: both;
+}
+
+.row-float:after, .row-float:before {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.row-float .col {
+    float: left;
+}
+
+.col {
+
+    width: 33.3%;
+    height: 300px;
+}
+
+.col p {
+    margin: 0;
+    padding: 30px;
+}
+.col-1 {
+    background: gray;
+}
+
+.col-2 {
+
+    background: darkgray;
+}
+
+.col-3 {
+    background: lightgray;
+}
+
+
+footer {
+    background: darkcyan;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    .row-float .col-2 {
+        float: none;
+    }
+    .row-float .col-3 {
+        float: right;
+    }
+}
+
+
+/* Flex */
+
+.list-flex {
+    display: flex;
+}
+.row-flex {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .row-flex {
+        flex-wrap:wrap;
+    }
+    .row-flex .col-2 {
+        order: 3;
+        width: 100%;
+    }
+    .row-flex .col-3,  .row-flex .col-1{
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
